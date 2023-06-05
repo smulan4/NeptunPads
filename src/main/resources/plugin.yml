@@ -2,3 +2,8 @@ name: NeptunPads
 version: '${project.version}'
 main: se.neptunmc.neptunpads.NeptunPads
 api-version: 1.19
+commands:
+  neptunpads:
+    aliases:
+      - npads
+      - pads

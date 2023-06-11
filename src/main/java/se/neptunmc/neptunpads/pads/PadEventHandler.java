@@ -11,7 +11,7 @@ import se.neptunmc.neptunpads.utils.ItemUtils;
 
 public class PadEventHandler implements Listener {
 
-    private PadManager padManager = NeptunPads.getInstance().getPadManager();
+    private final PadManager padManager = NeptunPads.getInstance().getPadManager();
 
     @EventHandler
     public void onPadMove(PlayerMoveEvent event) {

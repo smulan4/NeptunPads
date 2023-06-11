@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+import se.neptunmc.neptunpads.command.subcommands.CreatePadCommand;
 import se.neptunmc.neptunpads.command.subcommands.HelpCommand;
 import se.neptunmc.neptunpads.command.subcommands.ReloadCommand;
 import se.neptunmc.neptunpads.utils.TextUtils;
@@ -22,6 +23,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
     public CommandManager() {
         commands.put("help", new HelpCommand(commands));
         commands.put("reload", new ReloadCommand());
+        commands.put("create", new CreatePadCommand());
     }
 
     @Override

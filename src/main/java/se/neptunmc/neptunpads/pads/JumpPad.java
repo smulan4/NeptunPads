@@ -6,15 +6,15 @@ import se.neptunmc.neptunpads.NeptunPads;
 
 public class JumpPad {
 
-    private PadManager padManager = NeptunPads.getInstance().getPadManager();
-
-    private Location padLocation;
+    private final Location padLocation;
     private int strength;
 
-    public JumpPad(Location location) {
+    public JumpPad(Location location, int strength) {
 
         this.padLocation = location;
+        this.strength = strength;
 
+        PadManager padManager = NeptunPads.getInstance().getPadManager();
         padManager.addJumpPad(this);
     }
 
@@ -22,12 +22,12 @@ public class JumpPad {
         return padLocation;
     }
 
-    public int getStrength() {
-        return strength;
-    }
-
     public void setStrength(int strength) {
         this.strength = strength;
+    }
+
+    public int getStrength() {
+        return strength;
     }
 
     public void action(Player player) {

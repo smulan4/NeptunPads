@@ -1,6 +1,7 @@
 package se.neptunmc.neptunpads.command.subcommands;
 
 import org.bukkit.entity.Player;
+import se.neptunmc.neptunpads.NeptunPads;
 import se.neptunmc.neptunpads.command.CommandInterface;
 
 import java.util.List;

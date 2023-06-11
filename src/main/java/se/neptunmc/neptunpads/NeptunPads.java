@@ -7,6 +7,8 @@ import se.neptunmc.neptunpads.menu.MenuEventHandler;
 import se.neptunmc.neptunpads.pads.PadEventHandler;
 import se.neptunmc.neptunpads.pads.PadManager;
 
+import java.io.File;
+
 public final class NeptunPads extends JavaPlugin {
 
     private static NeptunPads instance;
@@ -20,7 +22,6 @@ public final class NeptunPads extends JavaPlugin {
         saveDefaultConfig();
 
         padManager = new PadManager(this);
-        padManager.loadPads();
 
         registerCommand();
         registerEvents();
@@ -46,6 +47,9 @@ public final class NeptunPads extends JavaPlugin {
     public static NeptunPads getInstance() {
         return instance;
     }
-    public PadManager getPadManager() { return padManager; }
+
+    public PadManager getPadManager() {
+        return padManager;
+    }
 
 }
